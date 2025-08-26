@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+
+h1 {
+  background-color: #392f67;
+  color: white;
+  height: 5rem;
+  line-height: 5rem;
+  margin: 0;
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #392f67;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  gap: 5rem;
+}
+
+#user-score,
+#comp-score {
+  font-size: 4rem;
+}
+
+.msg-container {
+  margin-top: 2rem;
+}
+
+#msg {
+  background-color: #392f67;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: 0;
+}
+
+/* 🔄 Restart Button */
+.reset-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#reset-btn {
+  background-color: #392f67;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#reset-btn:hover {
+  background-color: #5b4ca2;
+}
+
+/* ✨ Winner / Loser Glow */
+.winner-glow {
+  box-shadow: 0 0 20px 5px limegreen;
+  border: 3px solid limegreen;
+}
+
+.loser-glow {
+  box-shadow: 0 0 20px 5px red;
+  border: 3px solid red;
+}
+
+/* Disable clicks when game ends */
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
